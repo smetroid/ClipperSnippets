@@ -10,12 +10,16 @@
     "electron:build": "vue-cli-service electron:build",
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "postuninstall": "electron-builder install-app-deps",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "main": "background.js",
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
+    "electron-squirrel-startup": "^1.0.1",
     "electron-store": "^8.0.1",
     "focus-trap-vue": "0.0.6",
     "joplin-renderer": "^1.0.8",
@@ -32,6 +36,14 @@
     "vuetify": "^2.4.0"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-deb": "^7.8.1",
+    "@electron-forge/maker-rpm": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/maker-zip": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
     "@types/lowdb": "^1.0.11",
     "@types/nedb": "^1.8.12",
     "@vue/cli-plugin-babel": "~4.5.0",
